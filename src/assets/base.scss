@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import "mixins";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+  margin:0;padding:0;
+  &:hover,&:focus{ -moz-outline-style: none; outline: none;}
+  &:active {star:expression(this.onFocus=this.blur());}
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+body{font-family: "Microsoft YaHei","PingFang SC","Hiragino Sans GB","微软雅黑",Arial,sans-serif;color:#2A2C34;letter-spacing:0px;overflow-x: hidden;word-break: break-all;-moz-osx-font-smoothing:grayscale;background: #fff;-webkit-font-smoothing: inherit !important;min-width:1000px; overflow-y: visible;
+  fieldset,img,input,textarea,select,button{ border:0}
+  audio,canvas,video { *zoom: 1;}
+  table{border-collapse:collapse;border-spacing:0;}
+  input,textarea,select,button{list-style:none;outline:none;font-family: "Microsoft YaHei","PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","微软雅黑",Arial,sans-serif;}
+  em,i,address,cite,dfn,var{ font-style:normal; font-weight:normal}
+  caption,th{text-align:left}
+  ul,ol,li{list-style: none}
+  q:before,q:after{content:''}
+  abbr,acronym{border:0;font-variant:normal}
+  sup{vertical-align:text-top}
+  sub{vertical-align:text-bottom}
+  a{outline-style:none;text-decoration:none;color: #343641;}
+  a:hover{text-decoration: none;}
+  // 自定义常用样式
+  .clearfix{*zoom:1}
+  .clearfix:after{content: '';display: table;clear: both;}
+  .clear{ clear: both;}
+  .rel{ position: relative;}
+  .center{ text-align: center; }
+  .fr{ float: right; }
+  .fl{ float: left; }
+  .tr{ text-align: right }
+  .color{ color: $color }
+  .base_font{display: inline-block;vertical-align: top}
+  .base_font_m{transform: scale(0.8);display: inline-block;color: $font_color_min;vertical-align: top}
+  .hover:hover{opacity: 0.8;cursor: pointer}
+  .no_border{border: none !important}
+  .embar{opacity: 0.3 !important;}
+
+  /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+  select::-ms-expand { display: none; }
+
+  /*修改输入框placeholder文字默认颜色*/
+  input::-webkit-input-placeholder{
+    color:#aaa;
+  }
+  input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#aaa;
+  }
+  input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#aaa;
+  }
+  input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#aaa;
+  }
+
+  /*audio去掉下载按钮*/
+  audio::-webkit-media-controls-enclosure {overflow:hidden;} audio::-webkit-media-controls-panel {width: calc(100% + 30px);
+                                                             }
+  // 去除webkit下 input选择框淡黄底色
+  input:-webkit-autofill {-webkit-box-shadow: 0px 0px 0px 1000px white inset;}
+
+  /*去除Firefox下按钮虚线框终极方案*/
+  button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {border:none}
+}
