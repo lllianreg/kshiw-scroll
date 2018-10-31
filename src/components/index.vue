@@ -102,8 +102,7 @@
   }
 </script>
 
-<style scoped lang="scss">
-  @import "../assets/base";
+<style scoped lang="less">
   .main{margin: 0 auto; width: 1000px;}
   .item{text-align: left; width: 500px; float: left}
   .vertical-list {
